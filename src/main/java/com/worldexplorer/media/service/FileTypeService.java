@@ -7,9 +7,6 @@ import com.worldexplorer.media.util.FileUtils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Stream;
 
 /**
  * 第一阶段：文件类型整理功能
@@ -23,23 +20,6 @@ public class FileTypeService {
      */
     public FileTypeService() {
         this.classifier = new FileTypeClassifier();
-    }
-
-    /**
-     * 读取目录中的文件
-     */
-    public List<Path> readFiles(Path directory)
-            throws IOException {
-
-        List<Path> files = new ArrayList<>();
-
-        try (Stream<Path> stream = Files.list(directory)) {
-
-            stream.filter(Files::isRegularFile)
-                    .forEach(files::add);
-        }
-
-        return files;
     }
 
     /**
