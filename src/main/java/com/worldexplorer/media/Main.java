@@ -17,11 +17,11 @@ public class Main {
 
         // 待处理文件夹地址
         String directoryPath =
-                "H:\\互联网_待AI处理\\测验数据\\侧式数据2";
+                "F:\\未识别——副本\\Duplicate - 副本\\Duplicate";
 
         // 1 = 原地整理
         // 2 = 复制整理
-        int mode = 1;
+        int mode = 2;
 
         // ==================== 创建整理流程 ====================
 
